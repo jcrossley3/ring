@@ -1,11 +1,7 @@
 (defproject ring/ring-core "1.3.0-beta1"
   :description "Ring core libraries."
-  :url "https://github.com/ring-clojure/ring"
-  :scm {:dir ".."}
-  :license {:name "The MIT License"
-            :url "http://opensource.org/licenses/MIT"}
-  :dependencies [[org.clojure/clojure "1.3.0"]
-                 [org.clojure/tools.reader "0.8.1"]
+  :plugins [[lein-modules "0.3.1"]]
+  :dependencies [[org.clojure/tools.reader "0.8.1"]
                  [ring/ring-codec "1.0.0"]
                  [commons-io "2.4"]
                  [commons-fileupload "1.3"]
@@ -13,8 +9,5 @@
                  [crypto-random "1.2.0"]
                  [crypto-equality "1.0.0"]]
   :profiles
-  {:provided {:dependencies [[javax.servlet/servlet-api "2.5"]]}
-   :dev {:dependencies [[javax.servlet/servlet-api "2.5"]]}
-   :1.4 {:dependencies [[org.clojure/clojure "1.4.0"]]}
-   :1.5 {:dependencies [[org.clojure/clojure "1.5.1"]]}
-   :1.6 {:dependencies [[org.clojure/clojure "1.6.0"]]}})
+  {:provided {:dependencies [[javax.servlet/servlet-api "_"]]}
+   :dev {:dependencies [[javax.servlet/servlet-api "_"]]}})
